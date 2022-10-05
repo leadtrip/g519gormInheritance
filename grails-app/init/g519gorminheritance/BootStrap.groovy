@@ -11,7 +11,7 @@ import wood.mike.table.per.subclass.Car
 class BootStrap {
 
     def init = { servletContext ->
-        addBuildings()
+        //addBuildings()
         addVehicles()
     }
 
@@ -24,7 +24,7 @@ class BootStrap {
 
     @Transactional
     def addVehicles() {
-        new Car(primaryPowerSource: 'engine', numberOfSeats: 5).save()
+        new Car(primaryPowerSource: 'combustion engine', numberOfSeats: 5).save()
         new Bicycle(primaryPowerSource: 'human', numberOfGears: 24).save()
         new Boat(primaryPowerSource: 'wind', numberOfPassengers: 6).save()
     }
